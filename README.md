@@ -12,6 +12,10 @@ Generate the automation report
 
 5/ Save and close the excel file
 
-6/ Open the project in IDE and run the Main.java
+6/ Download the Cucumber report
+ 
+7/ Move and replace the json file named cucumber_reporter.html.json to folder
+
+8/ Open the project in IDE and run the Main.java
 
 #Thanks!
