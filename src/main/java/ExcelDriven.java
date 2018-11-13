@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class ExcelDriven {
 
-    public static String getCellValue(String src, String sheetName, int row, int column) {
+    public static String getCellValue(String src, String sheetName, int row, int column) throws IOException {
         try {
             FileInputStream srcFile = new FileInputStream(src);
             XSSFWorkbook wb = new XSSFWorkbook(srcFile);
@@ -19,7 +19,7 @@ public class ExcelDriven {
                 return value;
             }
             return null;
-        } catch (IOException e) {
+        } catch (NullPointerException e) {
             System.out.println(e.getMessage());
             return null;
         }
