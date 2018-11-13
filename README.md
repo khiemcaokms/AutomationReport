@@ -1,7 +1,8 @@
 # AutomationReport
 Generate the automation report
 
-#Guideline:
+# Guideline:
+
 1/ Go to folder AutomationReport\src\Data
 
 2/ Open the excel file named AutomationReport.xlsx
@@ -18,4 +19,4 @@ Generate the automation report
 
 8/ Open the project in IDE and run the Main.java
 
-#Thanks!
+# Thanks!
