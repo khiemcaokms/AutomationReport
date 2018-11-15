@@ -7,7 +7,9 @@ public class JSONDriven {
 
     public String getFeatureName(JsonArray array, int index){
         JsonObject object = array.get(index).getAsJsonObject();
-        return object.get("name").toString().replaceAll("[^A-Za-z0-9]","");
+        String featureName = object.get("name").toString();
+        int lastChar = featureName.length()-1;
+        return featureName.substring(1,lastChar);
     }
 
     public int getTotalScenario(JsonArray array, int index){
@@ -19,7 +21,9 @@ public class JSONDriven {
         JsonObject object = array.get(feature).getAsJsonObject();
         JsonArray arrayScenarios = object.getAsJsonArray("elements");
         JsonObject objectScenarios = arrayScenarios.get(scenario).getAsJsonObject();
-        return objectScenarios.get("name").toString().replaceAll("[^A-Za-z0-9]","");
+        String scenarioName = objectScenarios.get("name").toString();
+        int lastChar = scenarioName.length()-1;
+        return scenarioName.substring(1, lastChar);
     }
     public String getScenarioStatus(JsonArray array, int feature, int scenario){
         JsonObject object = array.get(feature).getAsJsonObject();
